@@ -1,0 +1,45 @@
+{
+  "name": "unsignedtuple",
+  "version": "1.0.0",
+  "description": "Personal blog using mern start",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack serve --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soumyadeepdutta/unsignedtuple.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "blog",
+    "react",
+    "webpack",
+    "babel"
+  ],
+  "author": "Soumyadeep Dutta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soumyadeepdutta/unsignedtuple/issues"
+  },
+  "homepage": "https://github.com/soumyadeepdutta/unsignedtuple#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
