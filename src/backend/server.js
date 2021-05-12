@@ -2,7 +2,11 @@ const path = require("path");
 const express = require("express");
 const app = express();
 const routes = require("./routes");
+const { connectDatabase } = require("./database");
 require("dotenv").config();
+
+// connect database
+connectDatabase();
 
 // server react build
 app.use("/", express.static(path.join(__dirname, "../../build")));
