@@ -5,6 +5,9 @@ const routes = require("./routes");
 const { connectDatabase } = require("./database");
 require("dotenv").config();
 
+// middlewares
+app.use(express.json())
+
 // connect database
 connectDatabase();
 
@@ -12,7 +15,7 @@ connectDatabase();
 app.use("/", express.static(path.join(__dirname, "../../build")));
 
 // handle all api routes
-routes(app);
+app.use("/api", routes)
 
 const port = process.env.PORT;
 app.listen(port, () => {
