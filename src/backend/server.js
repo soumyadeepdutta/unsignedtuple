@@ -1,12 +1,13 @@
 const path = require("path");
 const express = require("express");
 const app = express();
-const routes = require("./routes");
+const postRoutes = require("./post.routes");
+const userRoutes = require("./user.routes");
 const { connectDatabase } = require("./database");
 require("dotenv").config();
 
 // middlewares
-app.use(express.json())
+app.use(express.json());
 
 // connect database
 connectDatabase();
@@ -15,7 +16,8 @@ connectDatabase();
 app.use("/", express.static(path.join(__dirname, "../../build")));
 
 // handle all api routes
-app.use("/api", routes)
+app.use("/api/posts", postRoutes);
+app.use("/api/users", userRoutes);
 
 const port = process.env.PORT;
 app.listen(port, () => {
